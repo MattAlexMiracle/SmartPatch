@@ -36,7 +36,7 @@ parser.add_argument(
     default=False,
 )
 parser.add_argument("save_weights", type=str, help="location for saving/loading weights")
-parser.add_argument("image_folder", type=str, help="location for saving/loading images")
+parser.add_argument("image_folder", type=str, help="location for saving images")
 
 
 args = parser.parse_args()

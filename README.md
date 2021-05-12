@@ -3,7 +3,7 @@
 
 # SmartPatch: Improving Handwritten Word Imitation with Patch Discriminators
 
-
+This is the official code for `SmartPatch: Improving Handwritten Word Imitation with Patch Discriminators` to be published in ICDAR21.
 
 ## Dataset preparation
 

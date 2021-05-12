@@ -7,10 +7,11 @@
 
 ## Dataset preparation
 
-Training is done on the [IAM](http://www.fki.inf.unibe.ch/databases/iam-handwriting-database) dataset.
+Training is done on the [IAM](http://www.fki.inf.unibe.ch/databases/iam-handwriting-database) dataset.  
 First download the IAM word level dataset, then execute `prepare_dataset.sh [folder of iamdb dataset]` to prepared the dataset for training.  
-Afterwards, refer your folder in `load_data.py` (search `img_base`). I recommend to keep the folder at the default `./dataset`.
-If you want to have the actual storage somewhere else, it is simpler to symlink your data to `./dataset` then changing it and risk something breaking.
+Afterwards, refer your folder in `load_data.py` (search `img_base`).  
+I recommend to keep the folder at the default `./dataset`.  
+If you want to move the dataset somewhere else, it is simpler to symlink your storage location to `./dataset`, rather than changing the dataset location everywhere.
 
 ## How to train it?
 

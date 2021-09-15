@@ -2,8 +2,14 @@
 ![Python 3.7](https://img.shields.io/badge/python-3.7-green.svg)
 
 # SmartPatch: Improving Handwritten Word Imitation with Patch Discriminators
+![GANwritingVsSmartPatch](https://github.com/MattAlexMiracle/SmartPatch/blob/main/ComparisonGANwritingVsSmartPatch.jpg)
 
-This is the official code for `SmartPatch: Improving Handwritten Word Imitation with Patch Discriminators` to be published in ICDAR21.
+
+This is the official code for [SmartPatch: Improving Handwritten Word Imitation with Patch Discriminators](https://link.springer.com/chapter/10.1007/978-3-030-86549-8_18) published in ICDAR21.
+## Abstract
+
+As of recent generative adversarial networks have allowed for big leaps in the realism of generated images in diverse domains, not the least of which being handwritten text generation. The generation of realistic-looking hand-written text is important because it can be used for data augmentation in handwritten text recognition (HTR) systems or human-computer interaction.
+We propose SmartPatch, a new technique increasing the performance of current state-of-the-art methods by augmenting the training feedback with a tailored solution to mitigate pen-level artifacts. We combine the well-known patch loss with information gathered from the parallel trained handwritten text recognition system and the separate characters of the word. This leads to a more enhanced local discriminator and results in more realistic and higher-quality generated handwritten words.
 
 ## Dataset preparation
 
@@ -38,6 +44,30 @@ python generatePseudoIAM.py save_weights destination [--additional discriminator
 For convenience `genPseudoIam.sh` will generate all synthetic datasets into the HTR Benchmarking directory. (you may need to change the location of your models)
 For training the HTR system, look at the `test.py` in the HTR Benchmarking directory and at [the original repository](https://github.com/omni-us/research-seq2seq-HTR)
 
+## How to cite
+Please cite
+```
+@InProceedings{10.1007/978-3-030-86549-8_18,
+author="Mattick, Alexander
+and Mayr, Martin
+and Seuret, Mathias
+and Maier, Andreas
+and Christlein, Vincent",
+editor="Llad{\'o}s, Josep
+and Lopresti, Daniel
+and Uchida, Seiichi",
+title="SmartPatch: Improving Handwritten Word Imitation with Patch Discriminators",
+booktitle="Document Analysis and Recognition -- ICDAR 2021",
+year="2021",
+publisher="Springer International Publishing",
+address="Cham",
+pages="268--283",
+abstract="As of recent generative adversarial networks have allowed for big leaps in the realism of generated images in diverse domains, not the least of which being handwritten text generation. The generation of realistic-looking handwritten text is important because it can be used for data augmentation in handwritten text recognition (HTR) systems or human-computer interaction. We propose SmartPatch, a new technique increasing the performance of current state-of-the-art methods by augmenting the training feedback with a tailored solution to mitigate pen-level artifacts. We combine the well-known patch loss with information gathered from the parallel trained handwritten text recognition system and the separate characters of the word. This leads to a more enhanced local discriminator and results in more realistic and higher-quality generated handwritten words.",
+isbn="978-3-030-86549-8"
+}
+```
+
 ## Acknowledgements
 
 We thank the researchers at for releasing the code to the [HTR](https://github.com/omni-us/research-seq2seq-HTR) and [GANwriting](https://github.com/omni-us/research-GANwriting) systems on which this code is based.
+

@@ -38,6 +38,7 @@ Note that the nomenclature in this repo is a little different than the one used 
 - Naive patches only use rolling patches (just like in the paper)
 - Smart patches center the patches on the characters, but does **not** inject character information. In the paper this is called "centered patch"
 - Character patches center the patches and inject the character information. This is what the paper refers to as "smartpatch"
+
 Additionally to the discriminators described in the paper, there's a discriminator that injects style information, though this one performs worse than the others according to our benchmarks.
 
 ## Benchmarking

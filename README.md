@@ -33,7 +33,12 @@ python main_run.py id save_weights image_folder [--additional discriminator]
 - the id of the model in the `save_weights` directory, e.g. 1000 if you have a model named `contran-1000.model`.
 - -1 if you want to train from the latest checkpoint
 
-You can choose the additional discriminators using the flags (run --help for info). Additionally to the discriminators described in the paper, there's a discriminator that injects style information, though this one performs worse than the others according to our benchmarks.
+You can choose the additional discriminators using the flags (run --help for info).
+Note that the nomenclature in this repo is a little different than the one used in the paper:
+- Naive patches only use rolling patches (just like in the paper)
+- Smart patches center the patches on the characters, but does **not** inject character information. In the paper this is called "centered patch"
+- Character patches center the patches and inject the character information. This is what the paper refers to as "smartpatch"
+Additionally to the discriminators described in the paper, there's a discriminator that injects style information, though this one performs worse than the others according to our benchmarks.
 
 ## Benchmarking
 
